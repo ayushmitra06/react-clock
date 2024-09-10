@@ -1,38 +1,110 @@
-.App {
+/* General Styles */
+#app {
   text-align: center;
+  font-family: 'Poppins', sans-serif;
+  margin: 50px auto;
+  max-width: 600px;
+  background-color: #1e1e2e;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  color: #f8f8f2;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Break and Session Controls */
+.control {
+  display: inline-block;
+  background-color: #2e2e48;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 12px;
+  transition: background-color 0.3s ease;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.control h2 {
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+  color: #ff79c6;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.control button {
+  background-color: #44475a;
+  border: none;
+  color: #f8f8f2;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.control button:hover {
+  background-color: #6272a4;
+  transform: scale(1.1);
+}
+
+.control span {
+  font-size: 1.6rem;
+  margin: 0 10px;
+  color: #50fa7b;
+}
+
+/* Timer Display */
+.timer {
+  margin: 30px 0;
+  padding: 20px;
+  background-color: #2e2e48;
+  border-radius: 15px;
+  color: #f1fa8c;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+#timer-label {
+  font-size: 1.8rem;
+  color: #ffb86c;
+}
+
+#time-left {
+  font-size: 3.5rem;
+  color: #bd93f9;
+  animation: pulse 1s infinite;
+}
+
+/* Start, Pause, Reset Buttons */
+.controls button {
+  background-color: #ff5555;
+  border: none;
   color: white;
+  padding: 10px 30px;
+  font-size: 1.3rem;
+  border-radius: 8px;
+  margin: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.controls button:hover {
+  background-color: #ff6e6e;
+  transform: scale(1.05);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+#start_stop {
+  background-color: #2eae4e;
+}
+
+#start_stop:hover {
+  background-color: #69ff94;
+}
+
+/* Keyframes for the timer pulse */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
   }
 }
